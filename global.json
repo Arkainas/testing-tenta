@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "run": "dotnet run --project Backend",
+    "unit-tests": "dotnet test --logger \"console;verbosity=detailed\""
+  }
+}

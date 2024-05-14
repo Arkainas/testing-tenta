@@ -1,0 +1,19 @@
+{
+  "counter": 0,
+  "categories": [
+    {
+      "name": "Grönsaker",
+      "description": "Färska grönsaker."
+    },
+    {
+      "name": "Frukter",
+      "description": "Färska frukter."
+    },
+    {
+      "name": "Rengöringsprodukter",
+      "description": "Allt du behöver för att hålla hemmet rent."
+    }
+  ],
+  "products": [],
+  "comments": []
+}

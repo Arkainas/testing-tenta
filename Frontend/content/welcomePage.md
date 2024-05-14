@@ -1,0 +1,6 @@
+# Welcome
+![A beautiful sunset by the ocean.](/images/sunset.jpg "A beautiful sunset by the ocean.")
+
+Ut ac mattis velit. Morbi iaculis ligula quam, sit amet faucibus libero pharetra eget. Sed blandit neque sit amet lorem fermentum, et blandit arcu sagittis. Vivamus felis velit, eleifend id condimentum vitae, venenatis commodo neque. Donec tortor massa, semper at odio quis, imperdiet pretium dui. Fusce lobortis condimentum tortor, eu aliquam ex porta ut. Quisque condimentum odio leo, volutpat congue arcu egestas ut.
+
+In sit amet placerat lectus, sit amet egestas lorem. Vivamus lacinia eros vitae justo blandit luctus. Morbi ullamcorper augue vel luctus fermentum. Quisque tincidunt ultricies est, eget cursus turpis facilisis ut. Donec hendrerit convallis nisi, ut rhoncus elit aliquet suscipit. Ut fermentum ipsum sit amet elementum scelerisque. Praesent non lacus non augue gravida volutpat ac nec arcu. Aenean ultrices, quam quis vulputate eleifend, neque eros tristique risus, et facilisis erat tortor eget orci. Donec tincidunt tristique orci, non iaculis sapien feugiat vitae.
