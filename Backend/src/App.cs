@@ -3,10 +3,10 @@ Globals = Obj(new
 {
     debugOn = true,
     detailedAclDebug = false,
-    aclOn = false,
+    aclOn = true,
     isSpa = true,
     port = 3001,
-    serverName = "Ironboy's Minimal API Server",
+    serverName = "Kevins test API Server",
     frontendPath = FilePath("..", "Frontend"),
     sessionLifeTimeHours = 2
 });

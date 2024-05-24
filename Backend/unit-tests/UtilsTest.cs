@@ -7,6 +7,8 @@ public class UtilsTest(Xlog Console)
         File.ReadAllText(FilePath("json", "mock-users.json"))
     );
 
+    
+
     [Theory]
     [InlineData("abC9#fgh", true)]  // ok
     [InlineData("stU5/xyz", true)]  // ok too
@@ -75,4 +77,40 @@ public class UtilsTest(Xlog Console)
 
     // Now write the two last ones yourself!
     // See: https://sys23m-jensen.lms.nodehill.se/uploads/videos/2021-05-18T15-38-54/sysa-23-presentation-2024-05-02-updated.html#8
+
+
+    [Fact]
+    public void TestCountDomainsFromUserEmails()
+    {
+        var expectedDomainCounts = Utils.CountDomainsFromUserEmails();
+        var correctDomainCounts = new Obj();
+ 
+        var query = SQLQuery(@"SELECT SUBSTR(email, INSTR(email, '@')+1) AS domain,
+        COUNT() AS count FROM users GROUP BY domain ORDER BY count DESC;");
+        
+        foreach (var email in query){
+            correctDomainCounts[$"{email.domain}"] = email.count;
+        }
+        foreach (var domain in expectedDomainCounts.GetKeys())
+        {
+            string expected = $"{domain} {expectedDomainCounts[domain]}";
+            string correct = $"{domain} {correctDomainCounts[domain]}";
+            Assert.Equal(expected, correct);
+        }
+    }
+
+    [Fact]
+    public void TestDeleteMockUsers()
+    {
+        var read = File.ReadAllText(Path.Combine("json", "mock-users.json"));
+        Arr mockUsers = JSON.Parse(read);
+        Arr usersInDb = SQLQuery("select FROM users");
+        Arr emailsInDb = usersInDb.Map(user => user.email);
+        Arr mockUsersInDb = mockUsers.Filter(mockUser => emailsInDb.Contains(mockUser.email));
+
+        var result = Utils.DeleteMockUsers();
+
+        Assert.Equal(mockUsersInDb.Length, result.Length);
+    }
+
 }
